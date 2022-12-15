@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+input {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+/*card containe*/
+.users_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+/*header container*/
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header_btn {
+    font-size: 17px;
+    color: white;
+    border: 1px solid black;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 100ms transform ease-in-out;
+    background: #178bff;
+}
+
+.header_btn:hover {
+    filter: brightness(1.3);
+}
+
+/*Card*/
+.user {
+    border: 1px solid #007fff;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.user_title {
+    margin-bottom: 15px;
+}
+
+.user_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user_item span {
+    color: #abc;
+    text-transform: uppercase;
+}
+
+.user_item span i {
+    color: gray;
+    margin-right: 15px;
+}
+
+.user_item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.user_container_btn {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.user_btn {
+    font-size: 20px;
+    color: #222;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 100ms transform ease-in-out;
+}
+
+.user_btn:hover {
+    transform: scale(1, 1);
+}
+
+.user_btn:first-child {
+    background: lightblue;
+    color: black;
+}
+
+.user_btn:last-child {
+    color: black;
+}
+
+.user_btn:first-child:hover {
+    background: rgb(173, 0, 0);
+    color: white;
+}
+
+.user_btn:last-child:hover {
+    background: rgb(40, 173, 0);
+    color: white;
+}
+
+.user_container_btn .user_btn i {
+    width: 100px;
+}
+
+/*Modal*/
+.container_form {
+    position: fixed;
+    backdrop-filter: blur(2px);
+    background: #0005;
+    z-index: 2;
+    top: 0;
+    min-height: 100vh;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_form.disable_form {
+    display: none;
+}
+
+.form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+}
+
+.form_x {
+    position: absolute;
+    color: rgb(173, 0, 0);
+    font-size: 30px;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    transition: 100ms transform ease-in-out;
+}
+
+.form_title {
+    font-size: 20px;
+}
+
+.form_label {
+    font-size: 15px;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 17px;
+}
+
+.form_input {
+    padding: 7px 7px;
+    font-family: inherit;
+    background-color: aliceblue;
+    border: 1px solid #007fff;
+    border-radius: 5px;
+}
+
+.form_btn {
+    font-weight: 600;
+    width: 90%;
+    padding: 8px 12px;
+    background: #178bff;
+    border: none;
+    border-radius: 7px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 100ms filter ease-in-out;
+}
+
+.form_btn:hover {
+    filter: brightness(1.2);
+}
