@@ -52,6 +52,7 @@ function App() {
       .catch(err => console.log(err))
   }
 
+
   // se obtiene todos los usuarios a cargar
   useEffect(() => {
     getAllUsers()
@@ -61,12 +62,22 @@ function App() {
   const handleChangeShowModal = () => {
     setIsShowForm(!isShowForm)
   }
-
+  const handleClickNewUser = () => {
+    handleChangeShowModal()
+    const defaultValues = {
+      email: "",
+      password: "",
+      first_name: "",
+      last_name: "",
+      birthday: ""
+    }
+    setUserUpdate(defaultValues)
+  }
   return (
     <div className="App">
       <div className='header_container'>
         <h1 className='header_title'>Crud-Users-RH</h1>
-        <button onClick={handleChangeShowModal} className='header_btn'><i className='bx bx-plus' >Create new user</i></button>
+        <button onClick={handleClickNewUser} className='header_btn'><i className='bx bx-plus' >Create new user</i></button>
       </div>
       <FormUsers
         createUser={createUser}
@@ -83,6 +94,7 @@ function App() {
               user={user}
               deleteUser={deleteUser}
               setUserUpdate={setUserUpdate}
+              handleChangeShowModal={handleChangeShowModal}
             />
           ))
         }
@@ -92,3 +104,4 @@ function App() {
 }
 
 export default App
+
