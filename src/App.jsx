@@ -64,14 +64,8 @@ function App() {
   }
   const handleClickNewUser = () => {
     handleChangeShowModal()
-    const defaultValues = {
-      email: "",
-      password: "",
-      first_name: "",
-      last_name: "",
-      birthday: ""
-    }
-    setUserUpdate(defaultValues)
+
+    setUserUpdate()
   }
   return (
     <div className="App">
@@ -104,4 +98,3 @@ function App() {
 }
 
 export default App
-
